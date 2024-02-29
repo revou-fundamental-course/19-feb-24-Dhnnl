@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+</head>
+<body>
+  <header class="header-wrapper">        
+        <img class="logo" src="assets/20240229_085800.png"/>
+        
+        <div id="my-menu" class="menu">
+        <a href="#home">Home</a>
+        <a href="#our-profil">My Profile</a>
+        <a href="#pesan">Messages Us</a>
+        </div>                    
+  </header> 
+   
+    <nav>
+        <h1>Hi <span id="name"></span>Welcome To My Website!</h1>
+        <button id="tombol">Change Name</button>       
+    </nav>     
+    <section>
+        <a id="home"></a>
+       <div class="image">
+        <img class="slideShow" src="assets/20240229_091318.png" />
+        <img class="slideShow" src="assets/20240229_091255.png" />
+        <img class="slideShow" src="assets/20240229_091226.png" />
+        <a id="our-profil"></a>
+        <button onclick="plusDivs(-1)">Previous</button>        
+        <button onclick="plusDivs(1)">Next</button>
+       </div> 
+       
+     <fieldset>
+       
+      <div class="our-circle">       
+       <div class="ourcircle-items">
+       <div class="circle-image" style="background-image:  url('assets/20240229_091318.png');" ></div>
+          <p>Logo 1</p>             
+       </div>
+       
+       <div class="ourcircle-items">
+       <div class="circle-image" style="background-image:  url('assets/20240229_091255.png');" ></div>
+          <p>Logo 2</p> 
+       </div>              
+              
+       <div class="ourcircle-items">
+       <div class="circle-image" style="background-image:  url('assets/20240229_091226.png');" ></div>
+          <p>Logo 1,2</p>
+       </div> 
+      </div>                 
+              
+    </fieldset>
+        
+        <a id="pesan"></a>
+        <div class="form">            
+             
+           <form class="input-data" name="message-form" onsubmit="return validateForm()">
+              <h2>Messages Us</h2>
+            <a>add your Messages in Here:</a>
+              Nama:
+              <input placeholder="Name" type="text" name="full-name" />
+              <br />
+            
+              Tanggal Lahir: <input type="date" name="birth-date" />
+              <br />
+             
+              Jenis Kelamin: 
+              <input type="radio" id="male" name="gender" value="Laki-Laki"/>
+              <label for="male">Laki-Laki</label>
+              <input type="radio" id="female" name="gender" value="Perempuan"/>
+              <label for="female">Perempuan</label>
+              <br />
+            
+              Pesan: 
+              <textarea placeholder="Description" name="messages"></textarea> 
+              <br />
+            
+             <input type="submit" value="Submit" />
+           </form>
+         
+          
+            <div class="send-form">                       
+              <p>Nama: <span id="sender-full-name"></span></p>
+              <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+              <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+              <p>Pesan: <span id="sender-messages"></span></p>
+              <script src="script.js"></script>                                
+             </div>            
+     
+        </div>
+          
+        </section>
+         <footer>
+              <b>Revo-U 2024</b>
+         </footer>   
+       
+</body>
+
+</html>
